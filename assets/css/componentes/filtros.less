@@ -1,0 +1,83 @@
+.topo{
+    padding: 10px 0;
+
+    h1{
+        color:#333333;
+        text-align: center;
+    }
+
+    .filtros{
+        display:flex;
+        justify-content: center;
+        width:100%;
+        margin-top:5px;
+        padding:0 1em;
+
+        .filtros__cabecalho{
+            width:50%;
+            height: 60px;
+            border:1px solid #333333;
+            line-height: 60px;
+            text-align: center;
+            margin: 0;
+            color:#666666;
+            font-size:1.2rem;
+            font-weight: 400;
+        }
+
+        .filtros__cabecalho--borda-esquerda{
+            border-left-width:0;
+        }
+
+        .filtros__item.sanfona{
+            color:#000;
+            display:none;
+            .sanfona__cores,.sanfona__precos{
+                margin-left: 5rem;
+                text-align: left;
+
+                input[type=checkbox]{
+                    display: none;
+                }
+
+                input[type=checkbox] + label:before {
+                    display: inline-block;
+                    content: " ";
+                    border: 1px solid #666;
+                    border-radius: 0;
+                    width: 18px;
+                    height: 18px;
+                    padding:4px;
+                    margin-right:8px;
+                    vertical-align: middle;
+                    color: transparent;
+                    transition: .6s;
+                }
+
+                input[type=checkbox]:checked + label:before {
+                    background-color: #00bff3;
+                    background-clip:content-box;
+                }
+            
+            }
+
+            .sanfona__corpo.tamanhos{
+                .tamanhos__coluna{
+                    display:flex;
+
+                    .tamanhos__item{
+                        width: 60px;
+                        height: 60px;
+                        line-height: 60px;
+                        text-align: center;
+                        border:1px solid #a3a3a3;
+                        color: #a3a3a3;
+                        margin: 8px;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
