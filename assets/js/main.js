@@ -51,7 +51,6 @@ btnComprar.forEach((pedido) => {
     let itemProduto = '';
 
     dados.products.forEach((produto)=>{
-        console.log(produto.src);
         itemProduto += `
             <div class="produtos__item">
                 <div class="produtos__imagem">
