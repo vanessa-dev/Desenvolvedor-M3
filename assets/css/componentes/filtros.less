@@ -1,1 +1,53 @@
+.filter{
 
+    h3{
+        font-size: 2.3rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-top: 10px ;  
+    }
+
+    .filter__container{
+        padding: 15px 0;
+
+        .filter__cabecalho {
+            h4{
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .filter__body{
+            input[type=checkbox]{
+                display: none; 
+            }
+    
+            input[type=checkbox] + label:before {
+                display: inline-block;
+                content: " ";
+                border: 1px solid #666;
+                border-radius: 0;
+                width: 12px;
+                height: 12px;
+                padding:3px;
+                margin-right:8px;
+                vertical-align: middle;
+                color: transparent;
+                transition: .6s; 
+            }
+                
+            input[type=checkbox]:checked + label:before {
+                background-color: #00bff3;
+                background-clip:content-box;
+            }
+    
+            li + li{
+                margin-top: 5px;
+            }
+        }
+    }
+    
+}
