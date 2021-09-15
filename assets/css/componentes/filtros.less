@@ -5,6 +5,11 @@
         font-weight: 400;
         letter-spacing: 2px;
         margin-top: 10px ;  
+    } 
+
+    .filter__container.tamanhos .filter__body{
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .filter__container{
@@ -21,7 +26,7 @@
         }
 
         .filter__body{
-            input[type=checkbox]{
+            input{
                 display: none; 
             }
     
@@ -46,6 +51,28 @@
     
             li + li{
                 margin-top: 5px;
+            }
+
+            label.filter__item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                padding-left: 0;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #a3a3a3;
+                color: #a3a3a3;
+                transition: all 200ms;
+            
+            }
+
+            label.filter__item:hover{
+                border-color: #777676;
+                border-width:2px;
+                color: #777676;
+                font-weight: 700;
             }
         }
     }
