@@ -5,7 +5,7 @@
             "src": "assets/imagens/img_2.png",
             "title": "camiseta mescla",
             "price": 28.00,
-            "color": "gray",
+            "color": "cinza",
             "size": "M",
             "date": "2000-05-15",
             "installments": {
@@ -17,7 +17,7 @@
             "src": "assets/imagens/img_3.png",
             "title": "saia em couro",
             "price": 398.00,
-            "color": "black",
+            "color": "preto",
             "size": "P",
             "date": "2010-05-10",
             "installments": {
@@ -29,7 +29,7 @@
             "src": "assets/imagens/img_4.png",
             "title": "cardigan tigre",
             "price": 398.00,
-            "color": "orange",
+            "color": "laranja",
             "size": "38",
             "date": "2005-05-10",
             "installments": {
@@ -39,9 +39,9 @@
         }, {
             "id": 4,
             "src": "assets/imagens/img_5.png",
-            "title": "cardigan off white",
+            "title": "cardigan off branco",
             "price": 99.90,
-            "color": "white",
+            "color": "branco",
             "size": "GG",
             "date": "2015-05-10",
             "installments": {
@@ -53,7 +53,7 @@
             "src": "assets/imagens/img_6.png",
             "title": "body leopardo",
             "price": 129.90,
-            "color": "orange",
+            "color": "laranja",
             "size": "44",
             "date": "2000-05-05",
             "installments": {
@@ -77,7 +77,7 @@
             "src": "assets/imagens/img_8.png",
             "title": "cropped stripes",
             "price": 120.00,
-            "color": "yellow",
+            "color": "amarelo",
             "size": "P",
             "date": "2000-05-10",
             "installments": {
@@ -89,7 +89,7 @@
             "src": "assets/imagens/img_9.png",
             "title": "camisa transparente",
             "price": 398.00,
-            "color": "black",
+            "color": "preto",
             "size": "42",
             "date": "2000-05-10",
             "installments": {
@@ -101,7 +101,7 @@
             "src": "assets/imagens/img_10.png",
             "title": "pochete clutch",
             "price": 99.00,
-            "color": "black",
+            "color": "preto",
             "size": "M",
             "date": "2000-05-10",
             "installments": {
