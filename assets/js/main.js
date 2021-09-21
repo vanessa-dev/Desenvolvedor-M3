@@ -13,36 +13,39 @@ async function filtrarProdutos(filtro){
     const dados    = await response.json();
     let itemProduto = '';
 
-    filtro.forEach((item) =>{
-        dados.products.forEach((produto) =>{
-            if(item == produto.color) {
-                itemProduto += `
-                    <div class="produtos__item">
-                        <div class="produtos__imagem">
-                            <img src="${produto.src}" alt="Blusa"/>
+    if(filtro.length > 0){
+        filtro.forEach((item) =>{
+            dados.products.forEach((produto) =>{
+                if(item == produto.color) {
+                    itemProduto += `
+                        <div class="produtos__item">
+                            <div class="produtos__imagem">
+                                <img src="${produto.src}" alt="Blusa"/>
+                            </div>
+                            <div class="produtos__descricao">
+                                <p class="produtos__nome">${produto.title}</p>
+                                <p class="produtos__preco">${produto.price}</p>
+                                <p class="produtos__desconto">até 3x de R$ 9,33</p>
+                            </div>
+                            <button class="produtos__btn__comprar">Comprar</button>
                         </div>
-                        <div class="produtos__descricao">
-                            <p class="produtos__nome">${produto.title}</p>
-                            <p class="produtos__preco">${produto.price}</p>
-                            <p class="produtos__desconto">até 3x de R$ 9,33</p>
-                        </div>
-                        <button class="produtos__btn__comprar">Comprar</button>
-                    </div>
-                `;
+                    `;
+                }
+                
+            });
+    
+            if(itemProduto){
+                produtos.innerHTML = itemProduto;
+            } else {
+                produtos.innerHTML = "<p>Sua busca não encontrou resultado algum :(</p>";
             }
             
         });
 
-        if(itemProduto){
-            produtos.innerHTML = itemProduto;
-        } else {
-            produtos.innerHTML = "<p>Sua busca não encontrou resultado algum :(</p>";
-        }
-        
-    });
-
-  
+        return;
+    }
     
+   carregarDados();  
 };
 
 checkboxCores.forEach((filtrar) => {
@@ -97,7 +100,7 @@ btnComprar.forEach((pedido) => {
     }
 });
 
-(async function carregarDados() {
+async function carregarDados() {
     var url = window.location.origin + '/dados/produtos.json';
     const response = await fetch(url);
     const dados    = await response.json();
@@ -119,8 +122,9 @@ btnComprar.forEach((pedido) => {
         `;
     });
     produtos.innerHTML = itemProduto;
-})();
-  
+};
+ 
+carregarDados();
 
 
   
