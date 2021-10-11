@@ -28,7 +28,7 @@ async function filtrarProdutos(cores,tamanho,preco){
         });
     } else if (preco.length > 0) {
         preco.forEach((item) =>{
-            prods = dados.products.filter((produto) =>{
+            dados.products.filter((produto) =>{
                 if (produto.price >= item[0] && produto.price <= item[1]) {
                     prods.push(produto);
                 }
@@ -36,8 +36,8 @@ async function filtrarProdutos(cores,tamanho,preco){
             });
             
         });
-    } else {
-        prods = dados.products.filter((produto) =>{
+    } else if (tamanho) {
+        dados.products.filter((produto) => {
             if (produto.size ==  tamanho) {
                 prods.push(produto);
             }  
@@ -74,7 +74,7 @@ filtrosInput.forEach((filtrar) => {
         let name = this.getAttribute("name");
         if(name == "tamanho") {
             if (this.checked){
-                filtrosTamanho= this.value;
+                filtroTamanho= this.value;
             }
         } else if( name.includes("faixa")) {
             if (this.checked){
