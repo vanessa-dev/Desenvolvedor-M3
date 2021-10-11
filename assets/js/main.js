@@ -53,7 +53,7 @@ async function filtrarProdutos(cores,tamanho,preco){
                     </div>
                     <div class="produtos__descricao">
                         <p class="produtos__nome">${produto.title}</p>
-                        <p class="produtos__preco">${produto.price}</p>
+                        <p class="produtos__preco">R$ ${produto.price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</p>
                         <p class="produtos__desconto">até ${produto.installments.times}x de R$ ${produto.installments.price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</p>
                     </div>
                     <button class="produtos__btn__comprar">Comprar</button>
